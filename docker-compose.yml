@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  express-api:
+    container_name: express-api
+    # image: node:latest
+    build: ./
+    command: npm start
+    working_dir: /usr/src/app
+    ports:
+      - "5000:5000"
+    networks:
+      - default
